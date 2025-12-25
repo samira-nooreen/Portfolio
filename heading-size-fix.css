@@ -1,0 +1,13 @@
+/* HERO HEADING SIZE FIX */
+/* Just link this file in your HTML <head> section */
+
+.hero h1 {
+    font-size: 38px !important;
+}
+
+/* On mobile, make it even smaller */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px !important;
+    }
+}

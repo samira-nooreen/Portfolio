@@ -1,0 +1,203 @@
+===========================================
+SIMPLE FIX INSTRUCTIONS - PORTFOLIO
+===========================================
+
+YOUR CURRENT ISSUE:
+Skills section is INSIDE About section (lines 140-180)
+You want Skills to be a SEPARATE section AFTER About
+
+QUICK FIX (5 minutes):
+===========================================
+
+STEP 1: Delete lines 140-180 in index.html
+-------------------------------------------
+Find this section in your About:
+    <div class="skills">
+        <h3>Technical Skills & Tools</h3>
+        ...all the skill tags...
+    </div>
+
+DELETE everything from <div class="skills"> to </div> (the closing div of skills)
+
+This removes skills from About section.
+
+
+STEP 2: Make About section simple
+-------------------------------------------
+After Step 1, your About section should ONLY have:
+- intro-text paragraph
+- expertise-section (the 3 cards)
+- philosophy-text paragraph
+
+That's it! No skills.
+
+
+STEP 3: Add Skills as separate section
+-------------------------------------------
+RIGHT AFTER the closing </section> of About (around line 184),
+and BEFORE the Achievements section starts,
+
+ADD this new section:
+
+<!-- SKILLS SECTION - SEPARATE -->
+<section class="skills-section" id="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Skills & Tools</h2>
+        <p class="section-subtitle">
+            Comprehensive expertise across programming, AI/ML, technical art, and design
+        </p>
+
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3 class="skill-category-title">🧑‍💻 Programming & Computer Science</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">JavaFX</span>
+                    <span class="skill-tag">Data Structures & Algorithms</span>
+                    <span class="skill-tag">Compiler Design</span>
+                    <span class="skill-tag">Operating Systems</span>
+                    <span class="skill-tag">DBMS</span>
+                    <span class="skill-tag">Cybersecurity Fundamentals</span>
+                    <span class="skill-tag">Networks</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">🤖 AI, ML & Data</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">XGBoost</span>
+                    <span class="skill-tag">Logistic Regression</span>
+                    <span class="skill-tag">Fraud Detection Systems</span>
+                    <span class="skill-tag">Predictive Analytics</span>
+                    <span class="skill-tag">Model Deployment</span>
+                    <span class="skill-tag">AI Dashboards</span>
+                    <span class="skill-tag">Data Science</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">🎮 Technical Artist Skills</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Autodesk Maya</span>
+                    <span class="skill-tag">3D Modeling, UVs, Texturing</span>
+                    <span class="skill-tag">Hand-painted stylized art</span>
+                    <span class="skill-tag">Scene optimization</span>
+                    <span class="skill-tag">Real-time rendering</span>
+                    <span class="skill-tag">Game-ready asset creation</span>
+                    <span class="skill-tag">Python scripting for Maya tools</span>
+                    <span class="skill-tag">Shading & materials</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <h3 class="skill-category-title">🎨 Design</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag">Creative visualization</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+STEP 4: Update Navigation
+-------------------------------------------
+In your navbar (around line 17-22), change:
+    <li><a href="#about">About</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+
+TO:
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#achievements">Achievements</a></li>
+
+
+STEP 5: Add CSS for Skills Section
+-------------------------------------------
+Find the CSS section (around line 523) and add this BEFORE the Achievements CSS:
+
+/* SKILLS SECTION - SEPARATE */
+.skills-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #2d1b3d 0%, #1a1a2e 100%);
+}
+
+.skills-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-category {
+    margin-bottom: 50px;
+}
+
+.skill-category-title {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.skill-category-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(135deg, #8B3FA8 0%, #C850C0 100%);
+    border-radius: 2px;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: rgba(139, 63, 168, 0.15);
+    color: #e0b3ff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    border: 1px solid rgba(200, 80, 192, 0.25);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, #8B3FA8 0%, #C850C0 100%);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(200, 80, 192, 0.4);
+    border-color: transparent;
+}
+
+
+DONE! 
+===========================================
+Your portfolio will now have:
+1. Home
+2. About (simple text only)
+3. Skills (separate section)
+4. Achievements
+5. Projects
+6. Contact
+
+Save and refresh your browser!

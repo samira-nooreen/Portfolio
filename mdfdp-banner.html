@@ -1,0 +1,205 @@
+\u003c!-- ============================================ --\u003e
+\u003c!-- MDFDP WORKING-ON BANNER --\u003e
+\u003c!-- Add this right after "My Projects" heading --\u003e
+\u003c!-- ============================================ --\u003e
+
+\u003c!-- Working On Banner HTML --\u003e
+\u003cdiv class="working-on-banner"\u003e
+\u003cdiv class="banner-content"\u003e
+\u003cdiv class="banner-header"\u003e
+\u003cspan class="banner-icon"\u003e🚧\u003c/span\u003e
+\u003ch3 class="banner-title"\u003eCurrently Building: \u003cspan class="highlight"\u003eMulti-Domain Fraud Detection
+Platform (MDFDP)\u003c/span\u003e\u003c/h3\u003e
+\u003c/div\u003e
+\u003cp class="banner-description"\u003e
+A real-time AI system detecting fraud across UPI, Credit, Loan, Insurance, Identity Verification, and more — powered by
+ML models, risk scoring, and secure backend architecture.
+\u003c/p\u003e
+\u003ca href="#" class="banner-link"\u003eView Progress →\u003c/a\u003e
+\u003c/div\u003e
+\u003c!-- Add your MDFDP screenshot here --\u003e
+\u003cdiv class="banner-image"\u003e
+\u003cimg src="mdfdp-screenshot.png" alt="MDFDP Dashboard Preview" class="mdfdp-preview"\u003e
+\u003cdiv class="image-overlay"\u003e
+\u003cspan class="overlay-tag"\u003e✔ Feature Cards\u003c/span\u003e
+\u003cspan class="overlay-tag"\u003e✔ Heatmap\u003c/span\u003e
+\u003cspan class="overlay-tag"\u003e✔ Incident Distribution\u003c/span\u003e
+\u003cspan class="overlay-tag"\u003e✔ Fraud Type Chart\u003c/span\u003e
+\u003cspan class="overlay-tag"\u003e✔ Live Feed\u003c/span\u003e
+\u003c/div\u003e
+\u003c/div\u003e
+\u003c/div\u003e
+
+\u003c!-- ============================================ --\u003e
+\u003c!-- CSS STYLES FOR THE BANNER --\u003e
+\u003c!-- Add this to your \u003cstyle\u003e section --\u003e
+\u003c!-- ============================================ --\u003e
+
+\u003cstyle\u003e
+/* Working On Banner Styles */
+.working-on-banner {
+background: linear-gradient(135deg, rgba(139, 63, 168, 0.15) 0%, rgba(200, 80, 192, 0.1) 100%);
+border: 2px solid rgba(200, 80, 192, 0.3);
+border-radius: 20px;
+padding: 40px;
+margin: 40px 0 60px 0;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+align-items: center;
+position: relative;
+overflow: hidden;
+transition: all 0.4s ease;
+}
+
+.working-on-banner::before {
+content: '';
+position: absolute;
+top: -50%;
+right: -50%;
+width: 200%;
+height: 200%;
+background: radial-gradient(circle, rgba(200, 80, 192, 0.1) 0%, transparent 70%);
+animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+0%, 100% { transform: scale(1); opacity: 0.5; }
+50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.working-on-banner:hover {
+transform: translateY(-5px);
+border-color: #C850C0;
+box-shadow: 0 20px 60px rgba(200, 80, 192, 0.3);
+}
+
+.banner-content {
+position: relative;
+z-index: 2;
+}
+
+.banner-header {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.banner-icon {
+font-size: 36px;
+animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+
+.banner-title {
+font-size: 24px;
+font-weight: 600;
+color: #ffffff;
+line-height: 1.4;
+margin: 0;
+}
+
+.banner-title .highlight {
+background: linear-gradient(135deg, #8B3FA8 0%, #C850C0 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: 700;
+}
+
+.banner-description {
+color: #b8b8b8;
+font-size: 16px;
+line-height: 1.8;
+margin-bottom: 25px;
+}
+
+.banner-link {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: linear-gradient(135deg, #8B3FA8 0%, #C850C0 100%);
+color: white;
+padding: 12px 28px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 600;
+font-size: 14px;
+transition: all 0.3s ease;
+}
+
+.banner-link:hover {
+transform: translateX(5px);
+box-shadow: 0 10px 30px rgba(200, 80, 192, 0.4);
+}
+
+.banner-image {
+position: relative;
+z-index: 2;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+transition: all 0.4s ease;
+}
+
+.banner-image:hover {
+transform: scale(1.05);
+box-shadow: 0 20px 60px rgba(200, 80, 192, 0.4);
+}
+
+.mdfdp-preview {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+}
+
+.image-overlay {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background: linear-gradient(to top, rgba(26, 26, 46, 0.95) 0%, transparent 100%);
+padding: 20px;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.banner-image:hover .image-overlay {
+opacity: 1;
+}
+
+.overlay-tag {
+background: rgba(200, 80, 192, 0.2);
+border: 1px solid rgba(200, 80, 192, 0.4);
+color: #C850C0;
+padding: 6px 12px;
+border-radius: 15px;
+font-size: 12px;
+font-weight: 500;
+backdrop-filter: blur(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+.working-on-banner {
+grid-template-columns: 1fr;
+padding: 30px;
+}
+
+.banner-title {
+font-size: 20px;
+}
+
+.banner-description {
+font-size: 14px;
+}
+}
+\u003c/style\u003e

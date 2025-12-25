@@ -1,0 +1,294 @@
+<!-- ========================================
+     PROFESSIONAL ABOUT SECTION - COMPLETE REPLACEMENT
+     
+     INSTRUCTIONS:
+     1. Open your index.html
+     2. Find the About section (starts with: <section class="about" id="about">)
+     3. Replace ONLY the content inside <div class="about-text">...</div>
+     4. Keep the image part unchanged
+     5. Add the CSS at the bottom to your <style> section
+     ======================================== -->
+
+<!-- STEP 1: Replace the content inside <div class="about-text"> with this: -->
+
+<div class="about-text">
+    <p class="intro-text">
+        Computer Science Engineering student graduating in 2026, specializing in the convergence of
+        <strong>Software Engineering</strong>, <strong>Machine Learning</strong>, and <strong>Technical Art</strong>.
+    </p>
+
+    <div class="expertise-section">
+        <h3 class="subsection-title">Core Expertise</h3>
+        <div class="expertise-grid">
+            <div class="expertise-item">
+                <div class="expertise-icon">🤖</div>
+                <h4>AI/ML Engineering</h4>
+                <p>Fraud detection systems, predictive analytics, and intelligent dashboards powered by XGBoost and
+                    advanced ML models</p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">💻</div>
+                <h4>Full-Stack Development</h4>
+                <p>Building scalable web applications with Python, Flask, Java, React, and modern development frameworks
+                </p>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">🎮</div>
+                <h4>Technical Art & 3D</h4>
+                <p>Game-ready asset creation, Maya Python automation, and stylized 3D modeling with optimized workflows
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p class="philosophy-text">
+        My approach combines <strong>rigorous engineering principles</strong> with <strong>creative
+            problem-solving</strong>,
+        enabling me to deliver innovative solutions across software development, artificial intelligence, and digital
+        content creation.
+        I thrive in environments that demand both technical excellence and artistic vision.
+    </p>
+
+    <div class="skills">
+        <h3>Technical Skills & Tools</h3>
+        <div class="skill-tags">
+            <h4>🧑‍💻 Programming & Computer Science</h4>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">JavaFX</span>
+            <span class="skill-tag">Data Structures & Algorithms</span>
+            <span class="skill-tag">Compiler Design</span>
+            <span class="skill-tag">Operating Systems</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">Cybersecurity</span>
+            <span class="skill-tag">Networks</span>
+
+            <h4>🤖 AI, Machine Learning & Data Science</h4>
+            <span class="skill-tag">XGBoost</span>
+            <span class="skill-tag">Logistic Regression</span>
+            <span class="skill-tag">Fraud Detection Systems</span>
+            <span class="skill-tag">Predictive Analytics</span>
+            <span class="skill-tag">Model Deployment</span>
+            <span class="skill-tag">AI Dashboards</span>
+            <span class="skill-tag">Data Science</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+
+            <h4>🎮 Technical Art & 3D Production</h4>
+            <span class="skill-tag">Autodesk Maya</span>
+            <span class="skill-tag">3D Modeling</span>
+            <span class="skill-tag">UV Mapping</span>
+            <span class="skill-tag">Texturing</span>
+            <span class="skill-tag">Hand-painted Stylized Art</span>
+            <span class="skill-tag">Scene Optimization</span>
+            <span class="skill-tag">Real-time Rendering</span>
+            <span class="skill-tag">Game-ready Assets</span>
+            <span class="skill-tag">Maya Python Scripting</span>
+            <span class="skill-tag">Shading & Materials</span>
+
+            <h4>🎨 Design & Creative Tools</h4>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">UI/UX Design</span>
+            <span class="skill-tag">Creative Visualization</span>
+            <span class="skill-tag">Prototyping</span>
+        </div>
+    </div>
+</div>
+
+<!-- ======================================== -->
+<!-- STEP 2: Add this CSS to your <style> section (before the closing </style> tag) -->
+<!-- ======================================== -->
+
+<style>
+    /* Professional About Section Enhancements */
+
+    .intro-text {
+        font-size: 20px;
+        line-height: 1.8;
+        color: #e0e0e0;
+        margin-bottom: 45px;
+        text-align: justify;
+        font-weight: 400;
+    }
+
+    .intro-text strong {
+        color: #C850C0;
+        font-weight: 600;
+    }
+
+    .subsection-title {
+        font-size: 28px;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .subsection-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(135deg, #8B3FA8 0%, #C850C0 100%);
+        border-radius: 2px;
+    }
+
+    .expertise-section {
+        margin: 45px 0;
+    }
+
+    .expertise-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 25px;
+    }
+
+    .expertise-item {
+        background: rgba(139, 63, 168, 0.08);
+        padding: 30px;
+        border-radius: 15px;
+        border: 1px solid rgba(200, 80, 192, 0.15);
+        transition: all 0.3s ease;
+    }
+
+    .expertise-item:hover {
+        background: rgba(139, 63, 168, 0.15);
+        border-color: rgba(200, 80, 192, 0.4);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(200, 80, 192, 0.2);
+    }
+
+    .expertise-icon {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .expertise-item h4 {
+        font-size: 19px;
+        color: #ffffff;
+        margin-bottom: 12px;
+        font-weight: 600;
+    }
+
+    .expertise-item p {
+        font-size: 15px;
+        color: #b8b8b8;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    .philosophy-text {
+        font-size: 18px;
+        line-height: 1.9;
+        color: #d0d0d0;
+        margin-top: 45px;
+        padding: 30px;
+        background: rgba(139, 63, 168, 0.05);
+        border-left: 4px solid #C850C0;
+        border-radius: 8px;
+        text-align: justify;
+    }
+
+    .philosophy-text strong {
+        color: #C850C0;
+        font-weight: 600;
+    }
+
+    .skills {
+        margin-top: 55px;
+        padding-top: 45px;
+        border-top: 1px solid rgba(200, 80, 192, 0.2);
+    }
+
+    .skills h3 {
+        font-size: 28px;
+        margin-bottom: 35px;
+        color: #ffffff;
+        font-weight: 600;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .skills h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(135deg, #8B3FA8 0%, #C850C0 100%);
+        border-radius: 2px;
+    }
+
+    .skill-tags h4 {
+        font-size: 18px;
+        margin: 35px 0 18px 0;
+        color: #ffffff;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .skill-tag {
+        display: inline-block;
+        background: rgba(139, 63, 168, 0.15);
+        color: #e0b3ff;
+        padding: 10px 20px;
+        border-radius: 25px;
+        margin: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        border: 1px solid rgba(200, 80, 192, 0.25);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .skill-tag:hover {
+        background: linear-gradient(135deg, #8B3FA8 0%, #C850C0 100%);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(200, 80, 192, 0.4);
+        border-color: transparent;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 968px) {
+
+        .intro-text,
+        .philosophy-text {
+            font-size: 16px;
+            text-align: left;
+        }
+
+        .subsection-title,
+        .skills h3 {
+            font-size: 24px;
+        }
+
+        .expertise-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .expertise-item {
+            padding: 25px;
+        }
+
+        .expertise-item h4 {
+            font-size: 17px;
+        }
+
+        .expertise-item p {
+            font-size: 14px;
+        }
+    }
+</style>
